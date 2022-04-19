@@ -1,13 +1,14 @@
 import "./App.css";
 import { Layout } from "antd";
-import FeedbackForm from "./components/Form/index.jsx";
+import FeedbackForm from "./components/form/Form.jsx";
+import React from "react";
 
 const { Header, Footer, Content } = Layout;
 
 const App = () => {
   return (
     <Layout>
-      <Header>Header</Header>
+      <Header>Customer Feedback</Header>
       <Content>
         <FeedbackForm />
       </Content>
