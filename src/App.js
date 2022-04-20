@@ -3,7 +3,7 @@ import { Layout } from "antd";
 import FeedbackForm from "./components/form/Form.jsx";
 import React from "react";
 
-const { Header, Footer, Content } = Layout;
+const { Header, Content } = Layout;
 
 const App = () => {
   return (
@@ -12,7 +12,6 @@ const App = () => {
       <Content>
         <FeedbackForm />
       </Content>
-      <Footer>Footer</Footer>
     </Layout>
   );
 };

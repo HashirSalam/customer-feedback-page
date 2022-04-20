@@ -1,4 +1,4 @@
-import { Form, Input, Button, Row, Col } from "antd";
+import { Form, Input, Button, Row, Col, Divider } from "antd";
 import { Rate } from "antd";
 import { Comment, Avatar } from "antd";
 import React, { useState, useEffect } from "react";
@@ -48,8 +48,9 @@ const FeedbackForm = () => {
   return (
     <>
       <Row>
-        <Col md={16} xs={24}>
+        <Col md={12} xs={24}>
           <Form
+            data-testid="form"
             {...formItemLayout}
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
@@ -58,64 +59,84 @@ const FeedbackForm = () => {
             className="feedback-form"
           >
             <Form.Item
-              label="Name"
               name="name"
               rules={[{ required: true, message: "Please input your name!" }]}
             >
-              <Input placeholder="Jhon Doe" type="text" />
+              <Input
+                data-testid="name-input"
+                placeholder="Name"
+                type="text"
+                className="rounded-input input-height"
+              />
             </Form.Item>
 
             <Form.Item
               name="email"
               rules={[{ required: true, message: "Please input your email!" }]}
-              label="Email"
             >
-              <Input placeholder="you@email.com" type="email" />
+              <Input
+                data-testid="email-input"
+                placeholder="Email"
+                type="email"
+                className="rounded-input input-height"
+              />
             </Form.Item>
             <Form.Item
-              label="Rating"
+              data-testid="star"
               name="rating"
               rules={[{ required: true, message: "Please add a rating" }]}
             >
               <Rate data-testid="rating-component" />
             </Form.Item>
-            <Form.Item label="Comments" name="comments">
+            <Form.Item name="comments">
               <TextArea
-                placeholder="Comments if any"
+                data-testid="comments-input"
+                placeholder="Comments"
                 autoSize={{ minRows: 4, maxRows: 6 }}
               />
             </Form.Item>
             <Form.Item {...buttonItemLayout}>
-              <Button type="primary" htmlType="submit">
+              <Button
+                type="primary"
+                htmlType="submit"
+                data-testid="button-submit"
+              >
                 Submit
               </Button>
             </Form.Item>
           </Form>
         </Col>
-        <Col md={8} xs={24}>
-          {latestComments.length > 0 && <Chart data={latestComments} />}
+        <Col md={7} xs={24}>
+          {latestComments.length > 0 && (
+            <>
+              <h2>Insights</h2>
+              <Chart data={latestComments} id="chart" />
+            </>
+          )}
         </Col>
       </Row>
-
+      <Divider plain></Divider>
       {latestComments.length > 0 &&
         latestComments.map((comment, index) => (
-          <Comment
-            className="feedback-form"
-            key={index}
-            author={<span>{comment?.name}</span>}
-            avatar={
-              <Avatar
-                src="https://joeschmoe.io/api/v1/random"
-                alt={comment?.name}
-              />
-            }
-            content={
-              <>
-                <div>{comment?.comments}</div>
-                <Rate value={comment?.rating} disabled />
-              </>
-            }
-          />
+          <>
+            <Comment
+              className="feedback-form"
+              key={index}
+              author={<span>{comment?.name}</span>}
+              avatar={
+                <Avatar
+                  src="https://joeschmoe.io/api/v1/random"
+                  alt={comment?.name}
+                />
+              }
+              content={
+                <>
+                  <div>{comment?.comments}</div>
+                  <Rate value={comment?.rating} disabled />
+                </>
+              }
+            />
+          </>
         ))}
     </>
   );

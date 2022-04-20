@@ -4,6 +4,8 @@
 .ant-layout-header,
 .ant-layout-footer {
   color: #fff;
+  font-size: xx-large;
+  font-weight: bolder;
 }
 [data-theme="dark"] .ant-layout-header {
   background: #6aa0c7;

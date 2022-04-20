@@ -24,9 +24,9 @@ export default function Chart(props) {
         label: "# of Votes",
         data: calculateData(props.data),
         backgroundColor: [
-          "rgba(255, 206, 86, 0.2)",
-          "rgba(54, 162, 235, 0.2)",
-          "rgba(255, 99, 132, 0.2)",
+          "rgba(255, 206, 86, 0.8)",
+          "rgba(54, 162, 235, 0.8)",
+          "rgba(255, 99, 132, 0.8)",
         ],
         borderColor: [
           "rgba(255, 206, 86, 1)",
@@ -37,5 +37,5 @@ export default function Chart(props) {
       },
     ],
   };
-  return <Doughnut data={data} />;
+  return <Doughnut data={data} data-testid="doughnut-chart" />;
 }

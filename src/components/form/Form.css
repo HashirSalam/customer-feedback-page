@@ -1,7 +1,29 @@
 .feedback-form {
-  padding: 10px;
+  padding: 30px;
 }
 
 .chart {
   padding: 20px;
+}
+
+.rounded-input {
+  border-radius: 50px;
+}
+
+.input-height {
+  height: 48px;
+}
+
+.ant-form {
+  margin: 20px;
+}
+
+#comments {
+  border-radius: 20px;
+}
+
+form {
+  box-shadow: 0px 20px 50px rgb(0 0 0 / 20%);
+  border-radius: 20px;
+  padding: 50px;
 }
