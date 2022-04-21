@@ -77,6 +77,12 @@ Chart:
 Deployment:
 The app is deployed via vercel and can be viewd on (<a href="https://customer-feedback-page.vercel.app/">Demo</a>)
 
+## Roadmap (what’s left to improve and why.)
+
+    1) The first thing that I would add would be storybook components for better UI development, testing, and documentation.
+
+    2) Some CSS animations and transitions to smoothen out some of the changes.
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 [product-screenshot]: images/screenshot.png
