@@ -56,7 +56,7 @@ Here is a customer feeback project built for a demo task using React and Ant-des
 
 <!-- USAGE EXAMPLES -->
 
-## Usage
+## Features and Usage
 
 Feel free to fill the form and the graph will show live stats according to the ratings.
 
@@ -76,6 +76,9 @@ Chart:
 
 Deployment:
 The app is deployed via vercel and can be viewd on (<a href="https://customer-feedback-page.vercel.app/">Demo</a>)
+
+Dockerization (Containerisation):
+Tried to attempt the bonus task and created Docker configuration for development
 
 ## Roadmap (what’s left to improve and why.)
 
