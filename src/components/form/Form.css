@@ -18,7 +18,8 @@
   margin: 20px;
 }
 
-#comments {
+#comments,
+.ant-btn-primary {
   border-radius: 20px;
 }
 
