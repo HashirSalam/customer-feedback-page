@@ -82,9 +82,9 @@ Tried to attempt the bonus task and created Docker configuration for development
 
 ## Roadmap (what’s left to improve and why.)
 
-    1) The first thing that I would add would be storybook components for better UI development, testing, and documentation.
+    1) I would add  storybook components for better UI development, testing, and documentation.
 
-    2) Some CSS animations and transitions to smoothen out some of the changes.
+    2) Some CSS animations and transitions to smoothen out some of the UI changes.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
