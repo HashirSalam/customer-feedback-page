@@ -37,5 +37,12 @@ export default function Chart(props) {
       },
     ],
   };
-  return <Doughnut data={data} data-testid="doughnut-chart" />;
+  return (
+    <Doughnut
+      className="canvas"
+      style={{ maxHeight: "420px", marginTop: "30px" }}
+      data={data}
+      data-testid="doughnut-chart"
+    />
+  );
 }

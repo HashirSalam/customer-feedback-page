@@ -86,58 +86,64 @@ const FeedbackForm = () => {
               name="rating"
               rules={[{ required: true, message: "Please add a rating" }]}
             >
-              <Rate data-testid="rating-component" />
+              <Rate data-testid="rating-component" className="rating" />
             </Form.Item>
-            <Form.Item name="comments">
+            <Form.Item name="comments" noStyle>
               <TextArea
+                className="comment-section"
                 data-testid="comments-input"
                 placeholder="Comments"
                 autoSize={{ minRows: 4, maxRows: 6 }}
               />
             </Form.Item>
-            <Form.Item {...buttonItemLayout}>
+            <Form.Item {...buttonItemLayout} noStyle>
               <Button
                 type="primary"
                 htmlType="submit"
                 data-testid="button-submit"
+                block
               >
                 Submit
               </Button>
             </Form.Item>
           </Form>
         </Col>
-        <Col md={7} xs={24}>
+        <Col md={12} xs={24}>
           {latestComments.length > 0 && (
             <>
-              <h2>Insights</h2>
               <Chart data={latestComments} id="chart" />
             </>
           )}
         </Col>
       </Row>
       <Divider plain></Divider>
-      {latestComments.length > 0 &&
-        latestComments.map((comment, index) => (
-          <>
-            <Comment
-              className="feedback-form"
-              key={index}
-              author={<span>{comment?.name}</span>}
-              avatar={
-                <Avatar
-                  src="https://joeschmoe.io/api/v1/random"
-                  alt={comment?.name}
+      {latestComments.length > 0 && (
+        <Row>
+          <Col span={12}>
+            {latestComments.map((comment, index) => (
+              <>
+                <Comment
+                  className="comments-section"
+                  key={index}
+                  author={<span>{comment?.name}</span>}
+                  avatar={
+                    <Avatar
+                      src="https://joeschmoe.io/api/v1/random"
+                      alt={comment?.name}
+                    />
+                  }
+                  content={
+                    <>
+                      <div>{comment?.comments}</div>
+                      <Rate value={comment?.rating} disabled />
+                    </>
+                  }
                 />
-              }
-              content={
-                <>
-                  <div>{comment?.comments}</div>
-                  <Rate value={comment?.rating} disabled />
-                </>
-              }
-            />
-          </>
-        ))}
+              </>
+            ))}
+          </Col>
+        </Row>
+      )}
     </>
   );
 };

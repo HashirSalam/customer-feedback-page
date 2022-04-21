@@ -1,31 +1,70 @@
-# Create React App
+<div id="top"></div>
 
-This directory is a brief example of a [Create React App](https://github.com/facebook/create-react-app) site that can be deployed to Vercel with zero configuration.
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-## Deploy Your Own
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
 
-Deploy your own Create React App project with Vercel.
+<h3 align="center">Customer feedback (created for assignment task)</h3>
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/create-react-app&template=create-react-app)
+  <p align="center">
+    project_description
+    <br />
+    <a href="https://customer-feedback-page.vercel.app/">View Demo</a>
+</div>
 
-_Live Example: https://create-react-template.vercel.app/_
+<!-- ABOUT THE PROJECT -->
 
-## Available Scripts
+## About The Project
 
-In the project directory, you can run:
+[![Product Name Screen Shot][product-screenshot]](https://customer-feedback-page.vercel.app/)
 
-### `npm start`
+Here is a customer feeback project built for a demo task using React and Ant-design.
 
-Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-The page will reload when you make changes. You may also see any lint errors in the console.
+### Built With
 
-### `npm test`
+- [React.js](https://reactjs.org/)
+- [Ant Design](https://ant.design/)
+- [Vercel](https://vercel.com/dashboard)
 
-Launches the test runner in the interactive watch mode. See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-### `npm run build`
+<!-- GETTING STARTED -->
 
-Builds the app for production to the `build` folder.
+### Installation
 
-It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.
+1. Clone the repo
+
+2. Go to the repo
+3. Install NPM packages
+   ```sh
+   yarn install
+   ```
+4. Start the project
+   ```sh
+   yarn start
+   ```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- USAGE EXAMPLES -->
+
+## Usage
+
+Feel free to fill the form and the graph will show live stats according to the ratings.
+
+5 , 4 stars -- > Excellent
+
+3 ,2 stars -- > Good
+
+1 star --> Poor
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+[linkedin-url]: https://www.linkedin.com/in/hashir-salam-6a9155121/
+[product-screenshot]: images/screenshot.png
