@@ -1,7 +1,5 @@
 <div id="top"></div>
 
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -9,7 +7,6 @@
 <h3 align="center">Customer feedback (created for assignment task)</h3>
 
   <p align="center">
-    project_description
     <br />
     <a href="https://customer-feedback-page.vercel.app/">View Demo</a>
 </div>
@@ -29,6 +26,12 @@ Here is a customer feeback project built for a demo task using React and Ant-des
 - [React.js](https://reactjs.org/)
 - [Ant Design](https://ant.design/)
 - [Vercel](https://vercel.com/dashboard)
+- [React-CharJS-2](https://react-chartjs-2.js.org/)
+
+### Tested With
+
+- [Jest](https://ant.design/)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -39,6 +42,7 @@ Here is a customer feeback project built for a demo task using React and Ant-des
 1. Clone the repo
 
 2. Go to the repo
+
 3. Install NPM packages
    ```sh
    yarn install
@@ -56,15 +60,23 @@ Here is a customer feeback project built for a demo task using React and Ant-des
 
 Feel free to fill the form and the graph will show live stats according to the ratings.
 
-5 , 4 stars -- > Excellent
+Form:
 
-3 ,2 stars -- > Good
+    Filling the form posts the comments and renders the chart.
 
-1 star --> Poor
+    The comments are stored in localstorage and can be visited later again.
+
+Chart:
+
+    5 , 4 stars -- > Excellent
+
+    3 ,2 stars -- > Good
+
+    1 star --> Poor
+
+Deployment:
+The app is deployed via vercel and can be viewd on (<a href="https://customer-feedback-page.vercel.app/">Demo</a>)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-[linkedin-url]: https://www.linkedin.com/in/hashir-salam-6a9155121/
 [product-screenshot]: images/screenshot.png
